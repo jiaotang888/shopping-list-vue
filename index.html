@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html data-framework="vue">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping list</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/vue.min.js"></script>
+</head>
+<body>
+	<main id="container">
+		<header id="heading">
+			<img src="images/logo.png" height="120" width="120">
+			<h1>Shopping List</h1>
+		</header>
+		<section id="add-area">
+			<button v-on:click='resetList' id="reset">Reset List</button>
+			<br/>
+			<input v-model='newList' v-on:keyup.enter='addList' type="text" autocomplete="off" placeholder="+ Add items">
+			<br/>
+		</section>
+		<section id="list-area">
+			<ul>
+        		<li v-for='item in items'  v-bind:style="item.style">
+        			<button v-on:click='del($index)' class="delete">DEL</button>
+        			{{item.text}}
+        			<button v-on:click='done($index)' class="done">Done</button>
+        		</li>
+        	</ul>
+		</section>
+	</main>
+	<script src="js/app.js"></script>
+</body>
+</html>

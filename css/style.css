@@ -1,0 +1,80 @@
+#container{
+	margin-top: 50px;
+	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+header,section{
+	text-align: center;
+}
+button,input,ul{
+	display:inline-block;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+#reset{
+	background-color: #909090;
+	border: none;
+	border-radius: 15px;
+	color: #fff;
+	cursor: pointer;
+    font-size: 12pt;
+    height: 30px;
+    line-height: 24pt;
+    margin: 15px auto;
+    padding: 0 15px;
+}
+#reset:hover{
+	background-color: #575757;
+}
+input{
+	background-color: #909090;
+	border: none;
+	border-radius: 15px;
+	color: #fff;
+    font-size: 12pt;
+    height: 30px;
+    line-height: 24pt;
+    margin: 15px auto;
+    padding: 0 15px;
+    width: 500px;
+}
+button:focus,input:focus{
+	outline: none;
+}
+
+li{
+	margin: 15px auto;
+    padding: 0 15px;
+	list-style: none;
+	background-color: #575757;
+	border: none;
+	border-radius: 15px;
+	color: #fff;	
+    font-size: 12pt;
+    height: 30px;
+    line-height: 24pt;
+    text-align: center;
+    width: 500px;
+}
+.delete,.done{
+	width: 45px;
+	height: 30px;
+	background-color: #575757;
+	border: none;	
+	color: #fff;
+	cursor: pointer;
+    font-size: 12pt;
+    height: 30px;
+    line-height: 24pt;    
+}
+.delete:hover,.done:hover{
+	font-weight: bold;
+}
+.delete{
+	margin-left: 10px;
+	float: left;	
+}
+.done{
+	margin-right: 10px;
+	float: right;
+}
