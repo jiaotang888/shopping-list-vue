@@ -1,10 +1,7 @@
 new Vue({
 	el:'#container',
 	data:{
-		items:[
-		{text:'TEST-A',style:{}},
-		{text:'TEST-B',style:{}}
-		]
+		items:[]
 	},
 	methods:{
 		resetList:function(){
@@ -13,19 +10,18 @@ new Vue({
 		addList:function(){
 			var text = this.newList.trim();
 			if(text){
-				this.items.push({text:text});
+				this.items.push({ text:text,style:{} });
 				this.newList=''
 			}
 		},
 		del:function(index){
 			this.items.splice(index,1)
 		},
-		done:function(index){
-			var style = {
+		done:function(index){			
+			this.items[index].style = {
 				color:'#909090',
 				textDecoration:'line-through'
 			};
-			this.items[index].style = style
 		}
 	}
 });
